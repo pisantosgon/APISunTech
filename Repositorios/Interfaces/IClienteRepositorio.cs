@@ -8,6 +8,8 @@ namespace Api.Repositorios.Interfaces
 
         Task<ClienteModel> GetById(int id);
 
+        Task<ClienteModel> Login(string email, string password );
+
         Task<ClienteModel> InsertCliente(ClienteModel cliente);
 
         Task<ClienteModel> UpdateCliente(ClienteModel cliente, int id);

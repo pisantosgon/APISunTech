@@ -19,6 +19,11 @@ namespace Api.Repositorios
             return await _dbContext.Cliente.ToListAsync();
         }
 
+        public async Task<ClienteModel> Login(string email , string password )
+        {
+            return await _dbContext.Cliente.FirstOrDefaultAsync(x => x.EmailCliente == email && x.SenhaCliente == password );
+        }
+
         public async Task<ClienteModel> GetById(int id)
         {
             return await _dbContext.Cliente.FirstOrDefaultAsync(x => x.ClienteId == id);

@@ -42,6 +42,7 @@ namespace Api.Repositorios
             {
                 tipoprodutos.TipoProdutoId = tipoproduto.TipoProdutoId;
                 tipoprodutos.NomeTipoProduto = tipoproduto.NomeTipoProduto;
+                tipoprodutos.FotoTipoProduto = tipoproduto.FotoTipoProduto;
                 _dbContext.TipoProduto.Update(tipoprodutos);
                 await _dbContext.SaveChangesAsync();
             }

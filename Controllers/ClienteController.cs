@@ -37,6 +37,13 @@ namespace Api.Controllers
             return Ok(cliente);
         }
 
+        [HttpPost("Login")]
+        public async Task<ActionResult<ClienteModel>> Login([FromBody] ClienteModel clienteModel)
+        {
+            ClienteModel cliente = await _clienteRepositorio.Login(clienteModel.EmailCliente, clienteModel.SenhaCliente );
+            return Ok(cliente);
+        }
+
     }
 }
    

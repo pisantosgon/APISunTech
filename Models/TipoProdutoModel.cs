@@ -5,6 +5,7 @@
         public int TipoProdutoId { get; set; }
 
         public string NomeTipoProduto { get; set; } = string.Empty;
+        public string FotoTipoProduto { get; set; } = string.Empty;
 
 
         public static implicit operator List<object>(TipoProdutoModel v)

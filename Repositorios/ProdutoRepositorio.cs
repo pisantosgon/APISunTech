@@ -41,6 +41,7 @@ namespace Api.Repositorios
             else
             {
                 produtos.NomeProduto = produto.NomeProduto;
+                produtos.FotoProduto = produto.FotoProduto;
                 produtos.TipoProdutoId = produto.TipoProdutoId;
                 produtos.PrecoProduto = produto.PrecoProduto;
                 _dbContext.Produto.Update(produtos);

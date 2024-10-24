@@ -10,6 +10,7 @@ namespace Api.Data
         {
             builder.HasKey(x => x.TipoProdutoId);
             builder.Property(x => x.NomeTipoProduto).IsRequired().HasMaxLength(255);
+            builder.Property(x => x.FotoTipoProduto).IsRequired().HasMaxLength(255);
         }
     }
 }
